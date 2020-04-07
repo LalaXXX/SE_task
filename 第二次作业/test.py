@@ -3,13 +3,13 @@ import unittest
 class TestClass:
 	def maxSubArray(nums):
 		n = len(nums)
-		max_sum = 0
+		tmp = 0
 		for i in range(1, n):
 			if nums[i - 1] > 0:
 				nums[i] += nums[i - 1] 
-			max_sum = max(nums[i], max_sum)
+			tmp= max(nums[i], tmp)
 
-		return max_sum
+		return tmp
 
 
 class TestDemo(unittest.TestCase):
